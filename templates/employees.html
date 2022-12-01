@@ -15,7 +15,7 @@
         <th>Оклад</th>
         <th>В отпуске</th>
     </tr>
-    {% for item in org['Employees'] if item['id'] == id %}
+    {% for item in org['Employees'] %}
     <tr>
         <td>{{item["id"]}}</td>
         <td>{{item["FIO"]}}</td>
