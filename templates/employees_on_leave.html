@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="{{ css_path }}">
 </head>
 <body>
-<table>
+    <table>
     <caption><h2>Список сотрудников</h2></caption>
     <tr>
         <th>№</th>
@@ -15,7 +15,7 @@
         <th>Оклад</th>
         <th>В отпуске</th>
     </tr>
-    {% for item in org['Employees'] %}
+    {% for item in org['Employees'] if item['on_leave'] == on_leave %}
     <tr>
         <td>{{item["id"]}}</td>
         <td>{{item["FIO"]}}</td>
